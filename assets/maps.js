@@ -113,7 +113,7 @@ function addMarkerWithTimeout(data, timeout) {
     pane: "floatPane",
     enableEventPropagation: false,
   };
-  const customPin = new PinElement({
+  const customPin = new google.maps.marker.PinElement({
     background: "#061B34",
     borderColor: "#082A4C",
     glyphColor: "#082A4C",

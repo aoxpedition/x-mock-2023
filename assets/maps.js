@@ -15,7 +15,6 @@ var map,
   marker,
   infoWindows = [],
   textMap = document.getElementById('textmap');
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
   function initMaps() {
   
   var zoomAmt = 1

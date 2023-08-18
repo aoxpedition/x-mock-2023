@@ -14,12 +14,14 @@ var map,
   markers = [],
   marker,
   infoWindows = [],
-  textMap = document.getElementById('textmap')
-
-function initMaps() {
-  var zoomAmt = 3
-  if (window.innerWidth < 1023) { zoomAmt = 2 }
-  if (window.innerWidth < 600) { zoomAmt = 1 }
+  textMap = document.getElementById('textmap');
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+  function initMaps() {
+  
+  var zoomAmt = 1
+  // var zoomAmt = 3
+  // if (window.innerWidth < 1023) { zoomAmt = 1 }
+  // if (window.innerWidth < 600) { zoomAmt = 1 }
   var s = document.createElement("script");
   s.type = "text/javascript";
   s.src = "./assets/infobox.js";
@@ -48,7 +50,7 @@ function initMaps() {
     { featureType: "transit.line", elementType: "labels.text", stylers: [{ visibility: "off" }], },
     { featureType: "transit.station.airport", elementType: "geometry", stylers: [{ visibility: "off" }], },
     { featureType: "transit.station.airport", elementType: "labels", stylers: [{ visibility: "off" }], },
-    { featureType: "water", elementType: "geometry", stylers: [{ color: "#FFFFFF" }], },
+    { featureType: "water", elementType: "geometry", stylers: [{ color: "#FFF7F3" }], },
     { featureType: "water", elementType: "labels", stylers: [{ visibility: "off" }], },
     ],
   };
@@ -112,17 +114,24 @@ function addMarkerWithTimeout(data, timeout) {
     pane: "floatPane",
     enableEventPropagation: false,
   };
-  var icon = {
-    url: "/images/icon-pin.png",
-    scaledSize: new google.maps.Size(15, 33),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(7, 33),
-  };
+  const customPin = new PinElement({
+    background: "#061B34",
+    borderColor: "#082A4C",
+    glyphColor: "#082A4C",
+  });
+  // var icon = {
+  //   url: "/images/icon-pin.png",
+  //   scaledSize: new google.maps.Size(15, 33),
+  //   origin: new google.maps.Point(0, 0),
+  //   anchor: new google.maps.Point(7, 33),
+  // };
   window.setTimeout(function () {
+
     var marker = new google.maps.Marker({
       position: latLng,
       map: map,
       // icon: icon,
+      content: customPin,
       optimized: false,
       title: data.name,
       count: markers.length.toString(),

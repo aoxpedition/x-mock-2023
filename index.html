@@ -395,8 +395,8 @@
         .map h2 {
           font-size:6vw;
           position: absolute;
-          right: 13%;
-          top: -4vw;
+          bottom: 6vw;
+          left: 6vw;
           z-index: 10
         }
 
@@ -425,8 +425,20 @@
       </section>
     </div>
 
+    <section class="clients">
+      <div class="row">
+        <div class="col">
+          <div class="content">
+            <h2>Our clients</h2>
+            <p>We've worked closely with soem fo the largest companies on earth, telling stories both domestic and international</p>
+            <img src="./images/clients.jpg" alt="" style="width:100%;">
+          </div>
+        </div>
+      </div>
+    </section>
+
 <hr>
-<p style="color:var(--salmon)">【 These won't be on the homepage: 】</p>
+<p style="color:var(--salmon)">【 These will only be on landing pages, not on the homepage: 】</p>
     <a class="call-wrap" href="./studio.html">
       <div class="row">
         <img src="./images/flores-de-oaxaca.jpg" alt="" class="bg-img">
@@ -468,7 +480,7 @@
       dialog.showModal()
     }
     function closeCase(event){
-      var dialog = document.querySelector('#casestudy')
+      var dialog = document.querySelector('dialog')
       dialog.close()
     }
     document.querySelectorAll('.showcase').forEach(el =>{

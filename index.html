@@ -311,109 +311,6 @@
 </div>
 </div>
 
-    <style>
-      .homewrap {
-        contain: layout;
-        position: relative;
-      }
-      .map {
-        margin: 0 auto;
-        position: relative;
-        width: 100%;
-      }
-      .mapwrap {
-        contain: strict;
-        height: 34vw;
-        position: relative;
-        width: 100%;
-      }
-      #map {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
-      #textmap {
-        height: 100%;
-        list-style: none;
-        overflow-y: hidden;
-        position: absolute;
-        right: 100vw;
-        scroll-behavior: smooth;
-        top: 0;
-        width: 100%;
-      }
-      #textmap:before {
-        content: "";
-        display: block;
-        height: 34vw;
-      }
-    
-      #textmap:after {
-        content: "";
-        display: block;
-        height: 22vw;
-      }
-
-      .map>h2 {
-        color: #2b3037;
-        font-size: 14vw;
-        font-weight: 300;
-        font-family: "Sintony",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-        line-height: 1;
-        padding-left: 8px
-      }
-
-      .map>h3 {
-        font-family: "Sintony",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-        color: #90c0d8;
-        font-size: 15px;
-        font-weight: 300;
-        padding-left: 8px
-      }
-
-      /* @media (min-aspect-ratio: 4 / 3) {
-        .mapwrap {
-          height: 40vw;
-        }
-      } */
-
-      @media (min-width: 769px) {
-        .map h2 {
-          font-size:10vw
-        }
-
-        .map h3 {
-          font-size: 2.9vw
-        }
-
-        .infowindow h2 {
-          font-size: 24px
-        }
-      }
-
-      @media (min-width: 1025px) {
-        .map h2 {
-          font-size:6vw;
-          position: absolute;
-          bottom: 6vw;
-          left: 6vw;
-          z-index: 10
-        }
-
-        .map h3 {
-          font-size: 1.2vw;
-          position: absolute;
-          right: 13%;
-          top: 2vw;
-          z-index: 10
-        }
-
-        .infowindow h2 {
-          font-size: 30px;
-          position: static
-        }
-      }
-    </style>
     <div class="homewrap">
       <section class="map">
         <h2>Where we've been</h2>
@@ -430,7 +327,7 @@
         <div class="col">
           <div class="content">
             <h2>Our clients</h2>
-            <p>We've worked closely with soem fo the largest companies on earth, telling stories both domestic and international</p>
+            <p>We've worked closely with some fo the largest companies on earth, telling stories both domestic and international</p>
             <img src="./images/clients.jpg" alt="" style="width:100%;">
           </div>
         </div>
@@ -495,7 +392,7 @@
   var mapLocations=[{id:0,name:"1 Million Dance Studio ",address:"Seoul, South Korea",display:"",lat:"37.566535",lng:"126.9779692"},{id:1,name:"Google @ CES",address:"Las Vegas, NV",display:"photo",photo:"\/images\/google-ces-2019-xpedition-media-events.jpg",lat:"36.1699412",lng:"-115.1398296"},{id:2,name:"GWG Goodwill (Chelsea)",address:"Nashville, TN",display:"video",ytCode:"7qTxcaEcz-g",lat:"36.1626638",lng:"-86.7816016"},{id:3,name:"Coolhaus",address:"Culver City, CA",display:"video",ytCode:"xhhuKrUAEIo",lat:"34.0301577",lng:"-118.3813534"},{id:4,name:"Corey\u0027s Cakes",address:"Palm Harbor, FL",display:"video",ytCode:"_lCsJhoIQsA",lat:"28.0780718",lng:"-82.7637127"},{id:5,name:"Craftsvilla",address:"Mumbai, India",display:"video",ytCode:"JkOKhW0Emos",lat:"19.0759837",lng:"72.8776559"},{id:6,name:"Daniel Sotoamaya",address:"Seattle, Washington",display:"video",ytCode:"xw6gwfMmS0E",lat:"47.6062095",lng:"-122.3320708"},{id:7,name:"Dogue",address:"Bondi, Australia",display:"video",ytCode:"LH8wmwqNeYU",lat:"-33.8914755",lng:"151.2766845"},{id:8,name:"Edgar Barragan",address:"Queens, NY",display:"video",ytCode:"FlIaRLXIHKI",lat:"40.7282239",lng:"-73.7948516"},{id:9,name:"Favela Brass",address:"Rio de Janeiro, Brazil",display:"video",ytCode:"_vrKhqhx2B0",lat:"-22.9068467",lng:"-43.1728965"},{id:10,name:"Flores De Oaxaca",address:"Oaxaca, Mexico",display:"video",ytCode:"pQHvFXBc0Cc",lat:"17.0731842",lng:"-96.7265889"},{id:11,name:"GO-JEK",address:"Jakarta, Indonesia",display:"video",ytCode:"Ep0eozqifPU",lat:"-6.2087634",lng:"106.845599"},{id:12,name:"Google Marketing Live",address:"Mountain View, CA",display:"video",ytCode:"xuaLosuYeS8",lat:"37.3860517",lng:"-122.0838511"},{id:13,name:"Grow With Google Indianapolis",address:"Indianapolis, IN",display:"video",ytCode:"ND8GkHOXI5c",lat:"39.768403",lng:"-86.158068"},{id:14,name:"Highway Inn",address:"Oahu, Hawaii",display:"video",ytCode:"UhdpI8EMVBg",lat:"21.4389123",lng:"-158.0000565"},{id:15,name:"Honest Soul Yoga",address:"Alexandria, VA",display:"video",ytCode:"pCZ2D8CQpqo",lat:"38.8048355",lng:"-77.0469214"},{id:16,name:"Keller Strings",address:"New Orleans, LA",display:"video",ytCode:"reJz6F3TKbo",lat:"29.9510658",lng:"-90.0715323"},{id:17,name:"Krystn Keller",address:"Mobile, AL",display:"video",ytCode:"EkPCzwZ_x58",lat:"30.6953657",lng:"-88.0398912"},{id:18,name:"Marukome",address:"Nagano, Japan",display:"",lat:"36.6485258",lng:"138.1950371"},{id:19,name:"AdWords: Michael Johnson Performance",address:"McKinney, TX",display:"video",ytCode:"VFy9EJv1ttg",lat:"33.1983388",lng:"-96.6389342"},{id:20,name:"Missouri Star Quilt Co.",address:"Hamilton, MO",display:"video",ytCode:"QWnOF68HNMk",lat:"39.7436184",lng:"-93.9982743"},{id:21,name:"Mumm",address:"Cairo, Egypt",display:"video",ytCode:"SwaeUrJm1G4",lat:"30.0444196",lng:"31.2357116"},{id:22,name:"National Center for Transgender Equality",address:"Washington DC",display:"video",ytCode:"kxII5IvQ0Q8",lat:"38.9071923",lng:"-77.0368707"},{id:23,name:"Nehemiah",address:"Cincinnati, OH",display:"video",ytCode:"9-0yWGWcupg",lat:"39.1031182",lng:"-84.5120196"},{id:24,name:"Nolo VR",address:"Beijing, China",display:"",lat:"39.9041999",lng:"116.4073963"},{id:25,name:"Pasta Grannies",address:"Naples, Italy",display:"video",ytCode:"0jRX0xq24AU",lat:"40.8517983",lng:"14.26812"},{id:26,name:"Progetto Quid",address:"Verona, Italy",display:"video",ytCode:"VHcCLOG98PU",lat:"45.4383842",lng:"10.9916215"},{id:27,name:"Puerto Rico Hurricane Relief",address:"San Juan, Puerto Rico",display:"video",ytCode:"3_q7cvtGPw0",lat:"18.4655394",lng:"-66.1057355"},{id:28,name:"Rainbow Loom",address:"Novi, MI",display:"video",ytCode:"1YQOS3PcBGc",lat:"42.48059",lng:"-83.4754913"},{id:29,name:"Reaching Out",address:"Hoi An, Vietnam",display:"video",ytCode:"LucbEkXMmcE",lat:"15.8800584",lng:"108.3380469"},{id:30,name:"Vic\u0027s Italian",address:"Bradley Beach, NJ",display:"video",ytCode:"9HcULiL8K98",lat:"40.2023354",lng:"-74.0120814"},{id:31,name:"Wisconsin Cheese Mart",address:"Milwaukee, WI",display:"video",ytCode:"osyOao-wgaw",lat:"43.0389025",lng:"-87.9064736"},{id:32,name:"Yogolandia",address:"Chicago, IL",display:"video",ytCode:"ZY8m3zjWEks",lat:"41.8781136",lng:"-87.6297982"},]
   </script>
   <script id="maps-js" data-src="./assets/maps.js" async=""></script>
-  <script id="mapi" data-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgeVDlH6iak-7jOq60G8yqcPbzQVFE4Zs&amp;callback=initMaps&libraries=marker" async=""></script>
+  <script id="mapi" data-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ1dX0nmap_fKaS7mN_zeHsDF1vBjDH_U&callback=initMaps&libraries=marker" async=""></script>
 
 </body>
 

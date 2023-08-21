@@ -17,10 +17,10 @@ var map,
   textMap = document.getElementById('textmap');
   function initMaps() {
   
-  var zoomAmt = 1
-  // var zoomAmt = 3
-  // if (window.innerWidth < 1023) { zoomAmt = 1 }
-  // if (window.innerWidth < 600) { zoomAmt = 1 }
+  var zoomAmt = 3
+  if (window.innerWidth < 1920) { zoomAmt = 2 }
+  if (window.innerWidth < 1280) { zoomAmt = 1 }
+  if (window.innerWidth < 600) { zoomAmt = 0 }
   var s = document.createElement("script");
   s.type = "text/javascript";
   s.src = "./assets/infobox.js";
@@ -39,7 +39,7 @@ var map,
     { featureType: "administrative", elementType: "geometry.fill", stylers: [{ visibility: "off" }], },
     { featureType: "administrative.country", elementType: "geometry.stroke", stylers: [{ visibility: "off" }], },
     { featureType: "administrative.province", elementType: "geometry.stroke", stylers: [{ visibility: "off" }], },
-    { featureType: "landscape", elementType: "geometry", stylers: [{ visibility: "on" }, { color: "#e3e3e3" }], },
+    { featureType: "landscape", elementType: "geometry", stylers: [{ visibility: "on" }, { color: "#061B34" }], },
     { featureType: "landscape.natural", elementType: "labels", stylers: [{ visibility: "off" }], },
     { featureType: "poi", elementType: "all", stylers: [{ visibility: "off" }], },
     { featureType: "road", elementType: "all", stylers: [{ color: "#cccccc" }], },
@@ -113,11 +113,16 @@ function addMarkerWithTimeout(data, timeout) {
     pane: "floatPane",
     enableEventPropagation: false,
   };
-  const customPin = new google.maps.marker.PinElement({
-    background: "#061B34",
-    borderColor: "#082A4C",
-    glyphColor: "#082A4C",
-  });
+  const svgMarker = {
+    path: "M480.345-497Q504-497 520.5-513.845t16.5-40.5Q537-578 520.155-594.5t-40.5-16.5Q456-611 439.5-594.155t-16.5 40.5Q423-530 439.845-513.5t40.5 16.5ZM480-131Q345-252 276-357t-69-190q0-120 78.5-200.5T480-828q116 0 194.5 80.5T753-547q0 85-69 190T480-131Z",
+    fillColor: "#B0F1FF",
+    fillOpacity: 1,
+    strokeWeight: 1,
+    strokeColor: "#FFF7F3",
+    rotation: 0,
+    scale: .04,
+    anchor: new google.maps.Point(450, -150 )
+  };
   // var icon = {
   //   url: "/images/icon-pin.png",
   //   scaledSize: new google.maps.Size(15, 33),
@@ -130,7 +135,7 @@ function addMarkerWithTimeout(data, timeout) {
       position: latLng,
       map: map,
       // icon: icon,
-      content: customPin,
+      icon: svgMarker,
       optimized: false,
       title: data.name,
       count: markers.length.toString(),

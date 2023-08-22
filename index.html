@@ -17,10 +17,10 @@
 <body>
 
   <main>
-    <nav>
+    <header>
       <a href="./"><img src="./images/x-word-white.png" alt=""></a>
       <div>≡</div>
-    </nav>
+    </header>
 
     <section class="splide" aria-label="Xpedition">
       <div class="splide__track">
@@ -29,7 +29,7 @@
             <div class="homewrap panel1">
               <div class="big-hero">
                 <div class="hero-wrap">
-                  <img class="hero-vid" src="./images/minidoc-drum.png" alt="">
+                  <img class="hero-vid over" src="./images/minidoc-drum.png" alt="">
                   <div class="hero-overlay">
                     <div class="hero-text">
                       <h2>Lorem ipsum dolor sit amet</h2>
@@ -44,7 +44,7 @@
             <div class="homewrap panel1">
               <div class="big-hero">
                 <div class="hero-wrap">
-                  <img class="hero-vid" src="./images/FitbitSelects_03.jpg" alt="">
+                  <img class="hero-vid over" src="./images/FitbitSelects_03.jpg" alt="">
                   <div class="hero-overlay">
                     <div class="hero-text">
                       <h2>Lorem ipsum dolor sit amet</h2>
@@ -59,7 +59,7 @@
             <div class="homewrap panel1">
               <div class="big-hero">
                 <div class="hero-wrap">
-                  <video class="hero-vid blur" autoplay muted playsinline loop width="1920" height="1080" poster="./images/xpedition-media-sizzle-frame-1.jpeg" src="https://aoxpedition.github.io/x-mock-2023/video/xpedition-media-sizzle-x1080.mp4">
+                  <video class="hero-vid over blur" autoplay muted playsinline loop width="1920" height="1080" poster="./images/xpedition-media-sizzle-frame-1.jpeg" src="https://storage.googleapis.com/xpedition_co_assets/video/xpedition_sizzle_v230821_720.mp4">
                   </video>
 
                 </div>
@@ -98,8 +98,8 @@
       <div class="row">
         <div class="col">
           <div class="case-wrap">
-            <img class="bg-img" src="https://aoxpedition.github.io/x-mock-2023/images/TimHarris_KenyattaDocStills_v01_1.520.1.jpg" alt="">
-            <div class="case content">
+            <img class="bg-img over-md" src="https://aoxpedition.github.io/x-mock-2023/images/TimHarris_KenyattaDocStills_v01_1.520.1.jpg" alt="">
+            <div class="case content over-md">
               <div class="eyebrow">Doc fund</div>
               <h3 class="case-h">Kenyatta</h3>
               <div class="geo">
@@ -118,8 +118,8 @@
       <div class="row flex">
         <div class="col col-6">
           <div class="case-wrap">
-            <img class="bg-img" src="https://aoxpedition.github.io/x-mock-2023/images/mara-ncte-transvoices-google-xpedition-media-3.jpg" alt="" style="object-position: 50% 25%;">
-            <div class="case content">
+            <img class="bg-img over-md" src="https://aoxpedition.github.io/x-mock-2023/images/mara-ncte-transvoices-google-xpedition-media-3.jpg" alt="" style="object-position: 50% 25%;">
+            <div class="case content over-md">
               <div class="eyebrow">Documentary</div>
               <h3 class="case-h">Umbrella</h3>
               <div class="geo">
@@ -134,8 +134,8 @@
         </div>
         <div class="col col-6">
           <div class="case-wrap sm">
-            <img class="bg-img" src="https://aoxpedition.github.io/x-mock-2023/images/angeldose-documentary-02.jpg" alt="">
-            <div class="case content">
+            <img class="bg-img over-md" src="https://aoxpedition.github.io/x-mock-2023/images/angeldose-documentary-02.jpg" alt="">
+            <div class="case content over-md">
               <div class="eyebrow">Doc fund</div>
               <h3 class="case-h">Angel Dose</h3>
               <div class="geo">
@@ -151,62 +151,19 @@
       </div>
     </div>
 
-    <div class="cases framed">
-      <div class="col">
-        <h2 class="cases-h agency">Marketing Agency</h2>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="case-wrap">
-            <img class="bg-img" src="./images/FitbitSelects_03.jpg" alt="">
-            <div class="case content">
-              <div class="eyebrow">Social</div>
-              <h3 class="case-h">Influencer</h3>
-              <div class="geo">
-                <svg class="pin">
-                  <use href="#geo-pin"></use>
-                </svg>
-                Location, USA
-              </div>
-              <p class="case-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nam, error optio repudiandae dolor cumque modi.
-              </p>
-              <a href="#" data-cs="cs-kenyatta" class="cta showcase">Find out more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <div class="case-wrap">
-            <img class="bg-img" src="./images/experiential-blps.jpg" alt="" style="object-position: 50% 25%;">
-            <div class="case content">
-              <div class="eyebrow">Experiential</div>
-              <h3 class="case-h">Black & Latinx Publishers Summit</h3>
-              <div class="geo">
-                <svg class="pin">
-                  <use href="#geo-pin"></use>
-                </svg>
-                New York City, USA
-              </div>
-              <a href="#" class="cta showcase">Find out more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <dialog id="cs-kenyatta">
+    <dialog class="multi" id="cs-kenyatta">
       <div class="bar">
-        <div class="title">Keynatta Do not wait your turn</h2>
-          <button type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" style="height: 20px;" viewBox="0 0 512 512">
-              <use href="#sharrow" fill="#FFF7F3"></use>
+        <div class="title">
+          Keynatta Do not wait your turn<button type="button">
+            <svg class="share">
+              <use href="#linkshare"></use>
             </svg>
           </button>
 
         </div>
-        <div class="closedialog">ⓧ</div>
+        <button class="closedialog"><svg class="share">
+          <use href="#xclose"></use>
+        </svg></button>
       </div>
       <section class="splide" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
@@ -258,12 +215,98 @@
       </section>
     </dialog>
 
+    <div class="cases framed">
+      <div class="col">
+        <h2 class="cases-h agency">Marketing Agency</h2>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="case-wrap">
+            <img class="bg-img over-md" src="./images/FitbitSelects_03.jpg" alt="">
+            <div class="case content over-md">
+              <div class="eyebrow">Social</div>
+              <h3 class="case-h">Influencer</h3>
+              <div class="geo">
+                <svg class="pin">
+                  <use href="#geo-pin"></use>
+                </svg>
+                Location, USA
+              </div>
+              <p class="case-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nam, error optio repudiandae dolor cumque modi.
+              </p>
+              <button type="button" data-cs="cs-fitbit" class="cta showcase">Find out more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="case-wrap">
+            <img class="bg-img over-md" src="./images/experiential-blps.jpg" alt="" style="object-position: 50% 25%;">
+            <div class="case content over-md">
+              <div class="eyebrow">Experiential</div>
+              <h3 class="case-h">Black & Latinx Publishers Summit</h3>
+              <div class="geo">
+                <svg class="pin">
+                  <use href="#geo-pin"></use>
+                </svg>
+                New York City, USA
+              </div>
+              <button type="button" data-cs="cs-fitbit" class="cta showcase">Find out more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <dialog class="single" id="cs-fitbit">
+      <div class="bar">
+        <div class="title">
+          Lorem ipsum, dolor sit amet
+          <button type="button">
+            <svg class="share">
+              <use href="#linkshare"></use>
+            </svg>
+          </button>
+        </div>
+        <button class="closedialog"><svg class="share">
+          <use href="#xclose"></use>
+        </svg></button>
+      </div>
+      <div class="caseabout">
+        <div class="row flex">
+          <div class="col col-6">
+            <div class="sum content">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus eos maiores facere natus nihil ex quasi illo beatae recusandae incidunt quam, asperiores ipsa, optio ab corporis rerum deleniti</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus eos maiores facere natus nihil ex quasi illo beatae recusandae incidunt quam, asperiores ipsa, optio ab corporis rerum deleniti</p>
+            </div>
+          </div>
+          <div class="col col-6">
+            <div class="image content">
+              <img src="./images/fitbit-yoga-collage.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="pullquo">
+              <blockquote>“In order to change the senate, we have to change the senators.”</blockquote>
+              <cite>Keynatta do not wait your turn, 2023</cite>
+              <img src="./images/fitbit-logo-White.svg" alt="" class="caselogo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+
 <div class="socials">
 <div class="row flex">
   <div class="col col-6">
     <div class="case-wrap">
-      <img class="bg-img" src="./images/MiniDoc-Branded-Selects_03.png" alt="">
-      <div class="case content">
+      <img class="bg-img over-md" src="./images/MiniDoc-Branded-Selects_03.png" alt="">
+      <div class="case content over-md">
         <div class="eyebrow">Social</div>
         <h3 class="case-h">Read our blog</h3>
         <p class="case-p">Get to know the team and keep up-to-date with our projects.
@@ -275,8 +318,8 @@
   </div>
   <div class="col col-6">
     <div class="case-wrap">
-      <img class="bg-img" src="./images/MiniDoc-Branded-Selects_04.png" alt="">
-      <div class="case content">
+      <img class="bg-img over-md" src="./images/MiniDoc-Branded-Selects_04.png" alt="">
+      <div class="case content over-md">
         <div class="eyebrow">Social</div>
         <h3 class="case-h">Instagram</h3>
         <p class="case-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -292,9 +335,9 @@
 <div class="diversity">
 <div class="row flex">
   <div class="col col-6">
-    <div class="case-wrap" style="background: linear-gradient(45deg, var(--salmon), var(--cyan));">
-      <!-- <img class="bg-img" alt="" style=""> -->
-      <div class="content" style="font-family: cursive;">Inclusive image</div>
+    <div class="shell" style="background: linear-gradient(45deg, var(--salmon), var(--cyan));">
+      <!-- <img class="bg-img over" alt="" style=""> -->
+      <div class="content over" style="font-family: cursive;">Inclusive image</div>
     </div>
   </div>
   <div class="col col-6">
@@ -328,7 +371,7 @@
           <div class="content">
             <h2>Our clients</h2>
             <p>We've worked closely with some fo the largest companies on earth, telling stories both domestic and international</p>
-            <img src="./images/clients.jpg" alt="" style="width:100%;">
+            <img src="./images/client-and-partner-logos.png" alt="" style="width:100%;">
           </div>
         </div>
       </div>
@@ -338,7 +381,7 @@
 <p style="color:var(--salmon)">【 These will only be on landing pages, not on the homepage: 】</p>
     <a class="call-wrap" href="./studio.html">
       <div class="row">
-        <img src="./images/flores-de-oaxaca.jpg" alt="" class="bg-img">
+        <img src="./images/flores-de-oaxaca.jpg" alt="" class="bg-img over">
         <div class="callout">
           <h3 class="call-h">RESPECT THE STORY</h3>
           <p class="call-p">Find out about our <strong class="a">Entertainment Studio</strong></p>
@@ -348,7 +391,7 @@
 
     <a class="call-wrap" href="./agency.html">
       <div class="row">
-        <img src="./images/katy-perry-gml.jpg" alt="" class="bg-img">
+        <img src="./images/katy-perry-gml.jpg" alt="" class="bg-img over">
         <div class="callout">
           <h3 class="call-h">UNFORGETTABLE MOMENTS</h3>
           <p class="call-p">Find out about our <strong class="a">Marketing Agency</strong> expertise</p>
@@ -357,27 +400,27 @@
     </a>
 
   </main>
-  <div style="display:none;">
+  <div id="svgs" style="display:none;">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="geo-pin" viewBox="52.5 0 188.5 293.334">
-          <path d="M146.667,0C94.903,0,52.946,41.957,52.946,93.721c0,22.322,7.849,42.789,20.891,58.878    c4.204,5.178,11.237,13.331,14.903,18.906c21.109,32.069,48.19,78.643,56.082,116.864c1.354,6.527,2.986,6.641,4.743,0.212    c5.629-20.609,20.228-65.639,50.377-112.757c3.595-5.619,10.884-13.483,15.409-18.379c6.554-7.098,12.009-15.224,16.154-24.084    c5.651-12.086,8.882-25.466,8.882-39.629C240.387,41.962,198.43,0,146.667,0z M146.667,144.358" />
-          <circle style="fill:#222222;" cx="146.667" cy="90.196" r="21.756" />
+      <path d="M146.667,0C94.903,0,52.946,41.957,52.946,93.721c0,22.322,7.849,42.789,20.891,58.878    c4.204,5.178,11.237,13.331,14.903,18.906c21.109,32.069,48.19,78.643,56.082,116.864c1.354,6.527,2.986,6.641,4.743,0.212    c5.629-20.609,20.228-65.639,50.377-112.757c3.595-5.619,10.884-13.483,15.409-18.379c6.554-7.098,12.009-15.224,16.154-24.084    c5.651-12.086,8.882-25.466,8.882-39.629C240.387,41.962,198.43,0,146.667,0z M146.667,144.358" />
+      <circle style="fill:#222222;" cx="146.667" cy="90.196" r="21.756" />
     </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.5 67.3" id="sharrow" >
-      <path style="stroke:none;" d="m 51.5,0 30.82123,30.82125 -31.24345,33.14338 v -19.2105 c -20.00356,-5.52905 -36.59749,8.05642 -51.08725,22.37706 8.57603,-30.15951 18.16892,-44.73867 51.08727,-48.9762 z" id="path963"/>
-      </svg>
+    <svg id="xclose" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m256-168-88-88 224-224-224-224 88-88 224 224 224-224 88 88-224 224 224 224-88 88-224-224-224 224Z"/></svg>
+    <svg id="linkshare" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M425-246H280q-97.11 0-165.555-68.422Q46-382.845 46-479.922 46-577 114.445-645.5T280-714h145v126H280.429q-45.179 0-76.804 31.5T172-480q0 45 31.625 76.5t76.804 31.5H425v126ZM297-432v-96h366v96H297Zm238 186v-126h144.571q45.179 0 76.804-31.5T788-480q0-45-31.625-76.5T679.571-588H535v-126h145q97.11 0 165.555 68.422Q914-577.155 914-480.078 914-383 845.555-314.5T680-246H535Z"/></svg>
   </div>
 
   <script src="./assets/splide.min.js"></script>
   <script>
     function showCase(event){
       event.preventDefault()
-      var cs=  event.currentTarget.dataset.cs;
-      var dialog = document.querySelector('#cs-kenyatta')
-      new Splide(dialog.querySelector('.splide') ).mount();
+      var cs =  event.currentTarget.dataset.cs;
+      var dialog = document.querySelector('#' + cs)
+      var caseSlides = dialog.querySelector('.splide')
+      if (caseSlides) new Splide( caseSlides).mount();
       dialog.showModal()
     }
     function closeCase(event){
-      var dialog = document.querySelector('dialog')
+      var dialog = event.currentTarget.closest('dialog')
       dialog.close()
     }
     document.querySelectorAll('.showcase').forEach(el =>{
@@ -391,8 +434,8 @@
   <script id="map-geo-list" type="text/javascript">
   var mapLocations=[{id:0,name:"1 Million Dance Studio ",address:"Seoul, South Korea",display:"",lat:"37.566535",lng:"126.9779692"},{id:1,name:"Google @ CES",address:"Las Vegas, NV",display:"photo",photo:"\/images\/google-ces-2019-xpedition-media-events.jpg",lat:"36.1699412",lng:"-115.1398296"},{id:2,name:"GWG Goodwill (Chelsea)",address:"Nashville, TN",display:"video",ytCode:"7qTxcaEcz-g",lat:"36.1626638",lng:"-86.7816016"},{id:3,name:"Coolhaus",address:"Culver City, CA",display:"video",ytCode:"xhhuKrUAEIo",lat:"34.0301577",lng:"-118.3813534"},{id:4,name:"Corey\u0027s Cakes",address:"Palm Harbor, FL",display:"video",ytCode:"_lCsJhoIQsA",lat:"28.0780718",lng:"-82.7637127"},{id:5,name:"Craftsvilla",address:"Mumbai, India",display:"video",ytCode:"JkOKhW0Emos",lat:"19.0759837",lng:"72.8776559"},{id:6,name:"Daniel Sotoamaya",address:"Seattle, Washington",display:"video",ytCode:"xw6gwfMmS0E",lat:"47.6062095",lng:"-122.3320708"},{id:7,name:"Dogue",address:"Bondi, Australia",display:"video",ytCode:"LH8wmwqNeYU",lat:"-33.8914755",lng:"151.2766845"},{id:8,name:"Edgar Barragan",address:"Queens, NY",display:"video",ytCode:"FlIaRLXIHKI",lat:"40.7282239",lng:"-73.7948516"},{id:9,name:"Favela Brass",address:"Rio de Janeiro, Brazil",display:"video",ytCode:"_vrKhqhx2B0",lat:"-22.9068467",lng:"-43.1728965"},{id:10,name:"Flores De Oaxaca",address:"Oaxaca, Mexico",display:"video",ytCode:"pQHvFXBc0Cc",lat:"17.0731842",lng:"-96.7265889"},{id:11,name:"GO-JEK",address:"Jakarta, Indonesia",display:"video",ytCode:"Ep0eozqifPU",lat:"-6.2087634",lng:"106.845599"},{id:12,name:"Google Marketing Live",address:"Mountain View, CA",display:"video",ytCode:"xuaLosuYeS8",lat:"37.3860517",lng:"-122.0838511"},{id:13,name:"Grow With Google Indianapolis",address:"Indianapolis, IN",display:"video",ytCode:"ND8GkHOXI5c",lat:"39.768403",lng:"-86.158068"},{id:14,name:"Highway Inn",address:"Oahu, Hawaii",display:"video",ytCode:"UhdpI8EMVBg",lat:"21.4389123",lng:"-158.0000565"},{id:15,name:"Honest Soul Yoga",address:"Alexandria, VA",display:"video",ytCode:"pCZ2D8CQpqo",lat:"38.8048355",lng:"-77.0469214"},{id:16,name:"Keller Strings",address:"New Orleans, LA",display:"video",ytCode:"reJz6F3TKbo",lat:"29.9510658",lng:"-90.0715323"},{id:17,name:"Krystn Keller",address:"Mobile, AL",display:"video",ytCode:"EkPCzwZ_x58",lat:"30.6953657",lng:"-88.0398912"},{id:18,name:"Marukome",address:"Nagano, Japan",display:"",lat:"36.6485258",lng:"138.1950371"},{id:19,name:"AdWords: Michael Johnson Performance",address:"McKinney, TX",display:"video",ytCode:"VFy9EJv1ttg",lat:"33.1983388",lng:"-96.6389342"},{id:20,name:"Missouri Star Quilt Co.",address:"Hamilton, MO",display:"video",ytCode:"QWnOF68HNMk",lat:"39.7436184",lng:"-93.9982743"},{id:21,name:"Mumm",address:"Cairo, Egypt",display:"video",ytCode:"SwaeUrJm1G4",lat:"30.0444196",lng:"31.2357116"},{id:22,name:"National Center for Transgender Equality",address:"Washington DC",display:"video",ytCode:"kxII5IvQ0Q8",lat:"38.9071923",lng:"-77.0368707"},{id:23,name:"Nehemiah",address:"Cincinnati, OH",display:"video",ytCode:"9-0yWGWcupg",lat:"39.1031182",lng:"-84.5120196"},{id:24,name:"Nolo VR",address:"Beijing, China",display:"",lat:"39.9041999",lng:"116.4073963"},{id:25,name:"Pasta Grannies",address:"Naples, Italy",display:"video",ytCode:"0jRX0xq24AU",lat:"40.8517983",lng:"14.26812"},{id:26,name:"Progetto Quid",address:"Verona, Italy",display:"video",ytCode:"VHcCLOG98PU",lat:"45.4383842",lng:"10.9916215"},{id:27,name:"Puerto Rico Hurricane Relief",address:"San Juan, Puerto Rico",display:"video",ytCode:"3_q7cvtGPw0",lat:"18.4655394",lng:"-66.1057355"},{id:28,name:"Rainbow Loom",address:"Novi, MI",display:"video",ytCode:"1YQOS3PcBGc",lat:"42.48059",lng:"-83.4754913"},{id:29,name:"Reaching Out",address:"Hoi An, Vietnam",display:"video",ytCode:"LucbEkXMmcE",lat:"15.8800584",lng:"108.3380469"},{id:30,name:"Vic\u0027s Italian",address:"Bradley Beach, NJ",display:"video",ytCode:"9HcULiL8K98",lat:"40.2023354",lng:"-74.0120814"},{id:31,name:"Wisconsin Cheese Mart",address:"Milwaukee, WI",display:"video",ytCode:"osyOao-wgaw",lat:"43.0389025",lng:"-87.9064736"},{id:32,name:"Yogolandia",address:"Chicago, IL",display:"video",ytCode:"ZY8m3zjWEks",lat:"41.8781136",lng:"-87.6297982"},]
   </script>
-  <script id="maps-js" data-src="./assets/maps.js" async=""></script>
-  <script id="mapi" data-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ1dX0nmap_fKaS7mN_zeHsDF1vBjDH_U&callback=initMaps&libraries=marker" async=""></script>
+  <!-- <script id="maps-js" data-src="./assets/maps.js" async=""></script>
+  <script id="mapi" data-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ1dX0nmap_fKaS7mN_zeHsDF1vBjDH_U&callback=initMaps&libraries=marker" async=""></script> -->
 
 </body>
 

@@ -14,7 +14,7 @@
 }
 
 h1,h2,h3,h4,h5,h6, div,
-body, p, blockquote, dialog, nav {
+body, p, blockquote, dialog, header, nav {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -45,6 +45,9 @@ a:hover {
 button {
   background-color: transparent;
   border: none;
+  color: inherit;
+  padding: 0;
+  text-align: left;
 }
 svg {
   fill: var(--sand)
@@ -66,7 +69,7 @@ svg {
   width: 50%;
 }
 .col .content{
-  padding: 0 6vw 6vw 6vw;
+  padding: 6vw;
 }
 .framed{
  padding: 8px 4px 0 4px;
@@ -76,10 +79,19 @@ svg {
 }
 .framed .content {
   padding: calc(6vw - 8px);
-  padding-top: 0;
+}
+.over,.over-md{
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
 }
 
-nav{
+/*╶──────────────────╮ 
+ * Nav 
+*/  
+
+header{
   position: fixed;
   top:0;
   z-index: 1;
@@ -90,13 +102,18 @@ nav{
   align-items: center;
   font: 100 48px/1 system-ui, sans-serif;
 }
-nav img {
+header img {
   width: 160px;
 }
 main {
   margin: 0 auto;
   background-color: var(--sand);
 }
+
+
+/*╶──────────────────╮ 
+ * HERO 
+*/  
 .splide__arrow:disabled{
   opacity:0;
 }
@@ -114,17 +131,12 @@ main {
 .hero-wrap {
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   max-height: 64vw;
 }
 
 .hero-vid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   object-fit: cover
 }
 .hero-overlay{
@@ -173,12 +185,15 @@ h1 {
   text-align: center;
 }
 
+/*╶──────────────────╮ 
+ * INTRO 
+*/  
+
 .intro {
   background: var(--green);
   margin-bottom: 24px;
   padding-top: 6vw;
 }
-
 
 .split {
   background-color: var(--navy);
@@ -214,13 +229,13 @@ h1 {
 }
 
 .bg-img {
-  position:absolute;
-  inset: 0;
   display: block;
-  width: 100%;
-  height:100%;
   object-fit: cover;
 }
+
+/*╶────────────╮ 
+ * CASE STUDY 
+*/
 
 .cases-h{
   padding: calc(6vw - 8px);
@@ -242,10 +257,6 @@ h1 {
 }
 
 .case {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  width: 100%;
   color: var(--sand);
   display: flex;
   flex-direction: column;
@@ -266,10 +277,16 @@ h1 {
   margin-top: .5em;
 }
 
+
+/*╶─────────────────────╮ 
+ * DIALOG - CASE STUDY
+*/ 
+
 dialog{
   position: fixed;
   top: 50px;
-  max-width: 95vw;
+  width: 95vw;
+  max-width: 1440px;
   max-height: 90vh;
   margin:0 auto;
   z-index: 1;
@@ -278,7 +295,7 @@ dialog{
   background-color: var(--navy);
   color: var(--sand);
 }
-dialog.section{
+dialog .splide{
   padding: 0 3vw;
 }
 dialog::backdrop{
@@ -286,19 +303,36 @@ dialog::backdrop{
 }
 .bar {
   background: #082A4C;
-  height:48px;
+  height:44px;
   width:100%;
-  padding:8px;
   display:flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.bar .title{
+  margin-left: 3vw;
+}
+.multi .bar .title{
+  margin-left: 6vw;
+}
+
+.bar button{
+  height: 44px;
+  width: 44px;
+  vertical-align: middle;
+  text-align: center;
+}
+.bar .share {
+  height:20px;
+  width:20px;
 }
 .closedialog{
   text-align: center;
   cursor:pointer;
 }
 dialog .splide__slide .wrap{
-  padding: 48px
+  padding: 48px;
 }
 dialog .splide__slide .yt-row {
   padding: 0 42px 42px 42px;
@@ -306,21 +340,29 @@ dialog .splide__slide .yt-row {
 dialog .col .content{
   padding: 3vw;
 }
+.case-video .vid{
+  text-align:center;
+}
 .case-video iframe{
   aspect-ratio: 16 / 9;
   width: 100%;
+  max-width: 125vh;
   height: auto;
+}
+.caseabout .image{
+  text-align: center;
 }
 .caseabout .image img{
   width:100%;
+  max-width: 56vh;
   height: auto;
 }
 .pullquo{
   text-align: center;
-  padding: 0 42px 42px 42px;
+  padding: 0 3vw 3vw 3vw;
 }
 .pullquo blockquote {
-  font: 300 54px/66px 'Montserrat', sans-serif;
+  font: 300 4vw/1.2 'Montserrat', sans-serif;
   text-wrap: balance;
 }
 .pullquo cite {
@@ -333,16 +375,22 @@ dialog .col .content{
   margin: 0 auto;
 }
 
+/*╶──────────────────╮ 
+ * Diversity 
+*/ 
+.diversity .shell{
+  position: relative;
+  height: 34vw;
+}
 .diversity .content{
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 0;
 }
+
+/*╶──────────────────╮ 
+ * Map 
+*/ 
 
 .homewrap {
   contain: layout;
@@ -415,27 +463,7 @@ div#map:after {
   padding-left: 8px
 }
 
-/* @media (min-aspect-ratio: 4 / 3) {
-  .mapwrap {
-    height: 40vw;
-  }
-} */
-
-@media (min-width: 769px) {
-
-
-  .map h3 {
-    font-size: 2.9vw
-  }
-
-  .infowindow h2 {
-    font-size: 24px
-  }
-}
-
 @media (min-width: 1025px) {
-
-
   .map h3 {
     font-size: 1.2vw;
     position: absolute;
@@ -449,6 +477,10 @@ div#map:after {
     position: static
   }
 }
+
+/*╶──────────────────╮ 
+ * CLIENTS 
+*/  
 
 .clients{
   background-color: var(--navy);
@@ -472,6 +504,11 @@ div#map:after {
   margin-bottom: 8px;
   text-decoration: none;
 }
+
+.call-wrap {
+  height: 34vw;
+}
+
 .callout {
   position:absolute;
   width: 100%;
@@ -495,21 +532,28 @@ div#map:after {
 }
 
 
+/*╶──────────────────╮ 
+ * Large 
+*/  
 @media screen and (min-width: 1441px) {
-
-  .case-wrap,
-  .call-wrap {
-    height: 34vw;
+  .pullquo blockquote{
+    font: 300 54px/66px 'Montserrat', sans-serif
   }
-
 }
 
-@media screen and (max-width: 1279px) and (orientation: portrait) {
+/*╶──────────────────╮ 
+ * Tablet 
+*/  
+@media (max-width: 1279px) and (orientation: portrait) {
   .mob-tab-hide{
     display: none;
   }
   .mob-tab-show{
     display:block;
+  }
+  .hero-wrap {
+    height: auto;
+    padding-bottom: 56.25%
   }
   .row {
     flex-direction: column;
@@ -523,15 +567,18 @@ div#map:after {
   }
 }
 
-@media screen and (max-width: 1279px) {
-
-  .hero-wrap {
-    height: auto;
-    padding-bottom: 56.25%
-  }
+@media (max-width: 1279px) {
 
   .hero {
     height: 56.25vw;
+  }
+  .hero-overlay h2{
+    font-size: 5vw;
+    line-height: 1.2;
+  }
+  .hero-text a{
+    font-size:2.5vw;
+    line-height: 1.5;
   }
 
   .intro h2 {
@@ -541,9 +588,6 @@ div#map:after {
   .sum p{
     font: 400 18px/28px Lato, sans-serif;
   }
-  .pullquo blockquote {
-    font: 300 36px/48px 'Montserrat', sans-serif;
-  }
 
   .case-p {
     display: none;
@@ -551,7 +595,11 @@ div#map:after {
 
 }
 
-@media screen and (max-width: 600px) {
+/*╶──────────────────╮ 
+ * Mobile 
+*/  
+
+@media (max-width: 700px) {
   .mob-tab-hide{
     display: none;
   }
@@ -561,7 +609,11 @@ div#map:after {
   p {
     font: 400 16px/24px Lato, sans-serif;
   }
-  nav {
+  .over-md {
+    position: static;
+    height: auto;
+  }
+  header {
     padding: 8px 12px;
   }
   .content h2, .content h3 {
@@ -570,11 +622,8 @@ div#map:after {
   .hero-overlay p {
     font: 400 20px/30px Lato, sans-serif;
   }
-  .hero-text h2{
-    font: 500 20px/30px Montserrat, sans-serif;
-  }
-  .hero-text p{
-    font: 700 16px/24px Lato, sans-serif;
+  .hero-text a{
+    font-size: calc(12px + .5vw);
   }  
   .intro {
     background: var(--green);
@@ -590,28 +639,29 @@ div#map:after {
     height: auto;
   }
   .case-wrap .bg-img{
-    position: static;
     height:56vw;
   }
   .case.content {
-    position: static;
     background: var(--navy);
-    height: auto;
     padding-top: calc(6vw - 8px);
   }
   .cta {
     font: 700 16px/24px Lato, sans-serif;
   }
 
+  .bar .title{
+    font: 400 16px/24px 'Montserrat', sans-serif;
+  }
+ 
   .call-wrap {
     height: 56vw;
   }
   .call-h {
-    font: 300 24px/36px 'Montserrat', sans-serif;
+    font: 300 5vw/1.5 'Montserrat', sans-serif;
     margin: 0;
   }
   .call-p {
-    font: 400 16px/24px Lato, sans-serif;
+    font: 400 3.5vw/1.5 Lato, sans-serif;
     margin: 0;
   }
 
@@ -633,15 +683,42 @@ div#map:after {
   .sum p{
     font: 400 14px/22px Lato, sans-serif;
   }
-  .pullquo{
-    padding: 0 24px 24px 24px;
-  }
   .pullquo blockquote{
-    font: 300 28px/34px 'Montserrat', sans-serif;
+    font: 300 16px/24px 'Montserrat', sans-serif;
   }
   .pullquo cite{
     font: 400 14px/22px Lato, sans-serif;
     
   }
 
+}
+
+/*╶──────────────────╮ 
+ * Baby Mobile 
+*/ 
+@media (max-width: 379px) {
+  dialog{
+    top: 8px;
+    max-height: calc(100vh - 16px);
+  }
+
+  .bar .title{
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: Lato, sans-seif;
+  }
+  .multi .bar .title {
+    margin-left: 3vw;
+  }
+  .caseabout .image img{
+    max-width: 70vw;
+  }
+
+  .caselogo {
+    width: 100px;
+  }
+
+  .call-p {
+    font: 400 14px/22px Lato, sans-serif;
+  }
 }
